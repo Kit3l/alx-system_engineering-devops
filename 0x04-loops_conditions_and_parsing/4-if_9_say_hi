@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Display Best school but the 9th should display Hi
+COUNT=0
+while [ $COUNT -lt 10 ]
+do
+	if [ $COUNT -eq 9 ]
+	then
+		echo "Hi"
+	fi
+	echo "Best School"
+	COUNT=$((COUNT + 1))
+done
+
+
+
+
