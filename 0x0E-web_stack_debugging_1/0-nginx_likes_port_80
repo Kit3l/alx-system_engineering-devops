@@ -2,9 +2,6 @@
 # Fixes the nginx listening port and reloads the nginx master process
 sed -i 's/listen 8080/listen 80/g' /etc/nginx/sites-enabled/default
 sed -i 's/listen \[::\]:8080/listen \[::\]:80/g' /etc/nginx/sites-enabled/default
-nginx -t                  # Test the nginx configuration for syntax errors
-if [ $? -eq 0 ]; then
-    nginx -s reload        # Reload nginx if the configuration is valid
-else
-    echo "Nginx configuration test failed. Not reloading."
-fi
+pgrep nginx -o > /run/nginx.pid
+nginx -s reload
+echo '' > /run/nginx.pid
