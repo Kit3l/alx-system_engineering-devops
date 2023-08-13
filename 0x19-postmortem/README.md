@@ -27,3 +27,18 @@ August 4th,
 
 Root Cause:
 The system failure was caused by an SQL database corruption resulting from a hardware malfunction in the server hosting the database.
+
+
+Mitigation and Preventive Measures:
+
+-Database Backups: Review and enhance the frequency and integrity of database backups.The team  should  Implement a more robust backup and disaster recovery strategy.
+
+-Server Health Monitoring: The team will  Set up regular server health checks using monitoring tools to detect hardware issues promptly.
+
+-Redundancy and Failover: The team should Consider implementing redundancy and failover mechanisms to ensure service continuity in case of hardware failures.
+
+-Security Audit: Conduct a security audit to identify and address potential vulnerabilities that might have contributed to the failure.
+
+-Testing: Regularly perform load testing and system resilience tests to identify potential weaknesses and ensure the system can handle varying workloads.
+
+-Documentation: Maintain up-to-date documentation of system architecture, configurations, and disaster recovery procedures.
